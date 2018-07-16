@@ -3,5 +3,16 @@ layout: default
 ---
 
 <h1>Sunrise travel</h1> 
-<p>Lots of properties</p>
 
+<ul>
+	{% for property in site.posts %}
+	<li>
+		<a href="{{site.baseurl}}{{property.url}}">{{property.title}} in {{property.district}}, {{ property.street }}</a>
+		<p>
+		{% for category in property.categories %}
+		 <button>{{ category }}</button>
+		{% endfor%}
+		</p>
+	</li>
+	{% endfor %}
+</ul>

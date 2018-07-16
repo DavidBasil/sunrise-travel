@@ -2,8 +2,12 @@
 layout: default
 ---
 
+<button>
+	<a href="{{site.baseurl}}/"><h3>Back</h3></a>
+</button>
 
 <h2>{{page.title}} in {{page.district}}, {{page.street}}</h2>
+<img src="{{page.img[0]}}">
 <button>
 	{% if page.rent %}
 	{{ page.rent }}

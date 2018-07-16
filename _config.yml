@@ -1,3 +1,4 @@
 # markdown: redcarpet
 baseurl: /sunrise-travel
+permalink: pretty
 exclude: ['README.md']
