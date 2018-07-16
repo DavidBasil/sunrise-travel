@@ -1,0 +1,3 @@
+markdown: redcarpet
+baseurl: /sunrise-travel
+exclude: ['README.md']
