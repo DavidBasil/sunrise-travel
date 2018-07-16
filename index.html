@@ -2,17 +2,29 @@
 layout: default
 ---
 
-<h1>Sunrise travel</h1> 
 
-<ul>
+<div class="row">
 	{% for property in site.posts %}
-	<li>
-		<a href="{{site.baseurl}}{{property.url}}">{{property.title}} in {{property.district}}, {{ property.street }}</a>
-		<p>
-		{% for category in property.categories %}
-		 <button>{{ category }}</button>
-		{% endfor%}
-		</p>
-	</li>
+	<div class="col-sm-4">
+		<div class="card-deck">
+			<div class="card bg-light mb-3">
+				<div class="card-header">
+					<h5 class="card-title">
+						<a href="{{site.baseurl}}{{property.url}}" class="text-dark">{{property.title}} in {{property.district}}, {{ property.street }}</a>
+					</h5>
+				</div><!-- /card-header -->
+				<div class="card-body">
+					<img class="card-img" src="{{property.img[1]}}">
+				</div><!-- /card-body -->
+				<div class="card-footer">
+					<p>
+					{% for category in property.categories %}
+					<a class="badge badge-danger text-white">{{ category }}</a>
+					{% endfor%}
+					</p>
+				</div><!-- /card-footer -->
+			</div><!-- /card -->
+		</div><!-- /card-deck -->
+	</div><!-- /col-sm -->
 	{% endfor %}
-</ul>
+</div><!-- /row -->
