@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+
+<h2>{{page.title}} in {{page.district}}, {{page.street}}</h2>
+<button>
+	{% if page.rent %}
+	{{ page.rent }}
+	{% else %}
+	{{ page.price }}
+	{% endif %}
+</button>
+

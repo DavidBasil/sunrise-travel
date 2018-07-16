@@ -5,9 +5,9 @@ layout: default
 <h2>Properties</h2>
 
 <ul>
-	{% for property in site.categories.rent %}
+	{% for property in site.posts %}
 	<li>
-		<a href="">{{property.title}} in {{property.district}}, {{ property.street }}</a>
+		<a href="{{site.baseurl}}{{property.url}}">{{property.title}} in {{property.district}}, {{ property.street }}</a>
 		<p>
 		{% for category in property.categories %}
 		 <button>{{ category }}</button>
