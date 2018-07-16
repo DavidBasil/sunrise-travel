@@ -7,17 +7,17 @@
 </head>
 <body>
 
-	<header>
-		<h2>Sunrise Travel</h2>
-		<nav>
-			<ul>
-				<li><a href="{{site.baseurl}}/index.html">Home</a></li>
-				<li><a href="{{site.baseurl}}/properties.html">Properties</a></li>
-			</ul>
-		</nav>
-	</header>
+<header>
+	<h2>Sunrise Travel</h2>
+	{% include nav.html %}
+</header>
 
 {{content}}
+
+<footer>
+	<p>{{ 'now' | date: "%Y" }} &copy; Sunrise Travel</p>	
+	{% include nav.html %}
+</footer>
   
 </body>
 </html>
