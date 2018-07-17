@@ -6,12 +6,22 @@ layout: default
 <div class="uk-margin-top uk-grid-match" uk-grid>
 
 	{% for property in site.posts %}
-	<div class="uk-width-1-3@m">
+	<div class="uk-width-1-3@m uk-animation-fade">
 
 		<div class="uk-card uk-card-default uk-card-hover">
 
 			<div class="uk-card-header uk-background-primary uk-light">
-				<a href="{{site.baseurl}}{{property.url}}"><h5 class="uk-text-uppercase">{{property.title}} in {{property.district}}, {{ property.street }}</h5></a>
+				<h3>
+					<a href="{{site.baseurl}}{{property.url}}">{{property.title}} in {{property.district}}, {{ property.street }}</a>
+				<button class="uk-button uk-button-danger">
+					{% if property. rent%}
+						{{ property.rent }}
+					{% else %}
+						{{ property.price }}
+					{% endif %}
+				</button><!-- /uk-card-badge uk-label uk-label-danger -->
+				
+				</h3>
 			</div><!-- /uk-card-header -->
 			<div class="uk-card-body">
 				<img class="uk-card-media-top" src="{{property.img[0]}}">
