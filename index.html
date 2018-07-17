@@ -3,28 +3,30 @@ layout: default
 ---
 
 
-<div class="row">
+<div class="uk-margin-top uk-grid-match" uk-grid>
+
 	{% for property in site.posts %}
-	<div class="col-sm-4">
-		<div class="card-deck">
-			<div class="card bg-light mb-3">
-				<div class="card-header">
-					<h5 class="card-title">
-						<a href="{{site.baseurl}}{{property.url}}" class="text-dark">{{property.title}} in {{property.district}}, {{ property.street }}</a>
-					</h5>
-				</div><!-- /card-header -->
-				<div class="card-body">
-					<img class="card-img" src="{{property.img[1]}}">
-				</div><!-- /card-body -->
-				<div class="card-footer">
-					<p>
-					{% for category in property.categories %}
-					<a class="badge badge-danger text-white">{{ category }}</a>
-					{% endfor%}
-					</p>
-				</div><!-- /card-footer -->
-			</div><!-- /card -->
-		</div><!-- /card-deck -->
-	</div><!-- /col-sm -->
+	<div class="uk-width-1-3@m">
+
+		<div class="uk-card uk-card-default uk-card-hover">
+
+			<div class="uk-card-header uk-background-primary uk-light">
+				<a href="{{site.baseurl}}{{property.url}}"><h5 class="uk-text-uppercase">{{property.title}} in {{property.district}}, {{ property.street }}</h5></a>
+			</div><!-- /uk-card-header -->
+			<div class="uk-card-body">
+				<img class="uk-card-media-top" src="{{property.img[0]}}">
+			</div><!-- /uk-card-body -->
+			<div class="uk-card-footer">
+				<div class="uk-button-group">
+				{% for category in property.categories %}
+					<button class="uk-button uk-button-danger">{{category}}</button>
+				{% endfor%}
+				</div><!-- /uk-button-group -->
+			</div><!-- /uk-card-footer -->
+
+		</div><!-- /uk-card -->
+
+	</div><!-- /uk-width-1-3@m -->
 	{% endfor %}
-</div><!-- /row -->
+
+</div><!-- /grid -->
