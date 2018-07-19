@@ -1,21 +1,23 @@
 # Site
-name: 'Pintereso'
-description: 'Pintereso is a free Jekyll theme for awesome people like you, Pinterest like.'
+name: 'Sunrise Travel'
+description: 'Travel & Real Estate'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: '/sunrise-travel'
 avatar: 'assets/images/sal.jpg'
-email: 'wowthemesnet@gmail.com'
+email: 'info@sunrisetravel.ge'
 
 include: ["_pages"]
-permalink: /:title/
+permalink: pretty
+
+
 
 # Plugins
 plugins: 
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-postfiles
  
 # Defaults
 defaults:
