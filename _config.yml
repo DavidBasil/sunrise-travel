@@ -10,7 +10,9 @@ email: 'info@sunrisetravel.ge'
 include: ["_pages"]
 permalink: pretty
 
-
+sass:
+  style: compressed
+  sass_dir: css/_sass
 
 # Plugins
 plugins: 
